@@ -1,0 +1,4 @@
+[
+  { "user": "worker_1", "status": "failed", "location": "Block C", "time": "01:20" },
+  { "user": "worker_2", "status": "failed", "location": "Block C", "time": "01:21" }
+]

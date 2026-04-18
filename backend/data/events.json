@@ -1,0 +1,4 @@
+[
+  { "type": "fence_alert", "time": "01:10", "location": "Gate 3" },
+  { "type": "vehicle_detected", "time": "01:14", "location": "Storage Yard C" }
+]
