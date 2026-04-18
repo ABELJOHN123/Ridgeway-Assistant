@@ -1,19 +1,32 @@
 const ReviewPanel = ({ setDecision }) => {
   return (
-    <div style={{ marginTop: "20px" }}>
-      <h3>Review Decision</h3>
+    <div>
+      <h2 className="font-semibold mb-3">Review Decision</h2>
 
-      <button onClick={() => setDecision("Approved")}>
-        Approve
-      </button>
+      <div className="flex flex-col gap-2">
 
-      <button onClick={() => setDecision("Marked as Harmless")}>
-        Mark Harmless
-      </button>
+        <button
+          onClick={() => setDecision("Approved")}
+          className="bg-green-500 text-white py-2 rounded-lg"
+        >
+          Approve
+        </button>
 
-      <button onClick={() => setDecision("Escalated to Security")}>
-        Escalate
-      </button>
+        <button
+          onClick={() => setDecision("Marked as Harmless")}
+          className="bg-yellow-500 text-white py-2 rounded-lg"
+        >
+          Mark Harmless
+        </button>
+
+        <button
+          onClick={() => setDecision("Escalated")}
+          className="bg-red-500 text-white py-2 rounded-lg"
+        >
+          Escalate
+        </button>
+
+      </div>
     </div>
   );
 };

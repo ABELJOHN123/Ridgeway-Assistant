@@ -1,31 +1,35 @@
 const AIReport = ({ report }) => {
-  const getColor = () => {
-    if (report.confidence === "high") return "green";
-    if (report.confidence === "medium") return "orange";
-    return "red";
-  };
+  const color =
+    report.confidence === "high"
+      ? "text-green-600"
+      : report.confidence === "medium"
+      ? "text-yellow-600"
+      : "text-red-600";
 
   return (
-    <div style={{ marginTop: "20px", border: "1px solid gray", padding: "10px" }}>
-      <h3>AI Investigation Report</h3>
+    <div>
+      <h2 className="font-semibold mb-2">AI Report</h2>
 
-      <p><b>Summary:</b> {report.summary}</p>
-
-      <p>
-        <b>Confidence:</b>{" "}
-        <span style={{ color: getColor() }}>
-          {report.confidence}
-        </span>
+      <p className="text-sm text-gray-700 mb-2">
+        {report.summary}
       </p>
 
-      <p><b>Uncertainty:</b></p>
-      <ul>
-        {report.uncertainty.map((u, i) => (
-          <li key={i}>{u}</li>
-        ))}
-      </ul>
+      <p className={`font-semibold ${color}`}>
+        Confidence: {report.confidence}
+      </p>
 
-      <p><b>Recommended Action:</b> {report.recommended_action}</p>
+      <div className="mt-2">
+        <p className="text-sm font-medium">Uncertainty:</p>
+        <ul className="list-disc ml-5 text-sm text-gray-600">
+          {report.uncertainty.map((u, i) => (
+            <li key={i}>{u}</li>
+          ))}
+        </ul>
+      </div>
+
+      <p className="mt-2 text-sm">
+        <b>Action:</b> {report.recommended_action}
+      </p>
     </div>
   );
 };
