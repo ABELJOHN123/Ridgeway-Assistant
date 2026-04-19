@@ -1,59 +1,151 @@
-# 🚀 Ridgeway 6:10 Assistant
-
-**AI-First Overnight Intelligence Platform**
+# 🚀 Ridgeway 6:10 Assistant  
+**AI-First Overnight Intelligence System**
 
 ---
 
-## 🧠 Problem
+## 🧠 Overview
 
-Industrial sites generate continuous overnight signals:
+Ridgeway 6:10 Assistant is an AI-powered system that helps operators understand what happened overnight in industrial sites.
+
+Instead of reviewing raw logs, the system acts as an **AI investigator** that analyzes events, uses tools, and produces a clear morning report.
+
+---
+
+## 🎯 Problem
+
+Industrial sites generate many overnight signals:
 
 - Fence alerts  
-- Vehicle movements  
-- Failed badge swipes  
-- Drone patrol observations  
+- Badge failures  
+- Vehicle movement  
+- Drone patrol activity  
 
-By morning, operators like Maya face a challenge:
+By morning, operators must quickly understand:
 
-> **The system knows something happened — but not the full story.**
-
-Traditional dashboards flood users with logs.  
-This project solves that by building an **AI-native investigation system**.
+**What happened, what matters, and what needs action.**
 
 ---
 
-## 🎯 Solution
+## 💡 Solution
 
-**Ridgeway 6:10 Assistant** is an AI-driven investigation platform that:
+This system converts raw signals into an AI investigation workflow:
 
-- Collects overnight signals  
+- AI investigates events automatically  
 - Uses tools to gather context  
-- Correlates events intelligently  
-- Surfaces uncertainty  
-- Produces a **clear morning briefing**  
-- Keeps humans in control  
+- Correlates multiple signals  
+- Generates structured report  
+- Human stays in control  
 
 ---
 
-## ✨ Core Features
+## ✨ Features
 
-### 🤖 AI-First Workflow
-
-- User clicks **“Investigate Night”**
-- AI agent performs investigation automatically
-- No manual log stitching required
-
----
-
-### 🧰 Available Tools
-
-- `getNearbyEvents`
-- `getBadgeLogs`
-- `getDroneLogs`
-- `simulateDrone`
+### 🤖 AI Agent
+- Multi-step reasoning loop  
+- Tool-based investigation  
+- Context-aware analysis  
 
 ---
 
-### 🔁 Multi-Step Reasoning Loop
+### 🧰 Tools Used
+- getNearbyEvents  
+- getBadgeLogs  
+- getDroneLogs  
+- simulateDrone  
 
-AI → decides tool → executes tool → updates context → repeats → final answer
+---
+
+### 🗺️ Map View
+- Shows Gate 3, Block C, Storage Yard  
+- Displays risk zones  
+- Connects AI results to physical space  
+
+---
+
+### 🧾 Timeline
+- Shows step-by-step AI reasoning  
+- Displays tool execution flow  
+
+---
+
+### 🤖 AI Report
+- Summary  
+- Confidence level  
+- Uncertainty  
+- Recommended action  
+
+---
+
+### 👤 Human Review
+- Approve  
+- Mark harmless  
+- Escalate  
+
+---
+
+## ⚙️ Architecture
+
+Frontend (React)  
+→ Backend (Node.js)  
+→ AI Agent Loop  
+→ Tool Layer  
+→ Simulated Data  
+
+---
+
+## 🔁 AI Loop
+
+AI → Select Tool → Execute → Observe → Update → Final Report  
+
+---
+
+## ⚖️ Tradeoffs
+
+- Simulated data instead of real sensors  
+- Fixed map coordinates instead of GIS  
+- No real drone hardware  
+- Focus on AI reasoning system  
+
+---
+
+## 🤖 AI Usage
+
+- Architecture design  
+- Code generation  
+- Debugging  
+- UI improvements  
+
+---
+
+## ⚠️ Limitation Example
+
+A fence alert caused by wind may be flagged as suspicious.
+
+System handles it by:
+- marking uncertainty  
+- lowering confidence  
+- requiring human review  
+
+---
+
+## 🚀 Future Improvements
+
+- Risk scoring system  
+- Heatmap visualization  
+- Persistent database  
+- Better AI reasoning  
+- UI animations  
+
+---
+
+## 🏁 Conclusion
+
+This system transforms:
+
+Raw logs → AI investigation → clear decision support  
+
+---
+
+## 👤 Author
+
+Abel John
