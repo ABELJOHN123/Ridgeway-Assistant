@@ -1,13 +1,13 @@
 # 🚀 Ridgeway 6:10 Assistant  
-**AI-First Overnight Intelligence System**
+**AI-First Overnight Intelligence & Investigation System**
 
 ---
 
 ## 🧠 Overview
 
-Ridgeway 6:10 Assistant is an AI-powered system that helps operators understand what happened overnight in industrial sites.
+Ridgeway 6:10 Assistant is an AI-powered system designed to help operators understand what happened overnight in industrial sites.
 
-Instead of reviewing raw logs, the system acts as an **AI investigator** that analyzes events, uses tools, and produces a clear morning report.
+Instead of manually analyzing logs, the system acts as an **AI investigator** that collects evidence, uses tools, and generates a structured morning briefing.
 
 ---
 
@@ -20,132 +20,146 @@ Industrial sites generate many overnight signals:
 - Vehicle movement  
 - Drone patrol activity  
 
-By morning, operators must quickly understand:
+Operators need fast answers:
 
-**What happened, what matters, and what needs action.**
+> What happened? What matters? What needs attention?
 
 ---
 
 ## 💡 Solution
 
-This system converts raw signals into an AI investigation workflow:
+The system transforms raw signals into an AI-driven investigation workflow:
 
-- AI investigates events automatically  
-- Uses tools to gather context  
+- AI agent investigates events  
+- Dynamically calls tools  
 - Correlates multiple signals  
 - Generates structured report  
-- Human stays in control  
+- Keeps humans in control  
 
 ---
 
-## ✨ Features
+## 🗺️ Map-Based Spatial Intelligence
 
-### 🤖 AI Agent
-- Multi-step reasoning loop  
-- Tool-based investigation  
-- Context-aware analysis  
+- Shows key site locations:
+  - Gate 3  
+  - Block C  
+  - Storage Yard  
 
----
-
-### 🧰 Tools Used
-- getNearbyEvents  
-- getBadgeLogs  
-- getDroneLogs  
-- simulateDrone  
+- Visualizes risk zones  
+- Connects AI findings to physical space  
+- Highlights drone inspection areas  
 
 ---
 
-### 🗺️ Map View
-- Shows Gate 3, Block C, Storage Yard  
-- Displays risk zones  
-- Connects AI results to physical space  
+## 🧾 Investigation Timeline
+
+- Displays AI tool execution history  
+- Shows step-by-step reasoning  
+- Improves transparency and trust  
 
 ---
 
-### 🧾 Timeline
-- Shows step-by-step AI reasoning  
-- Displays tool execution flow  
+## 🤖 AI Report
 
----
+The system generates a structured report:
 
-### 🤖 AI Report
-- Summary  
+- Summary of events  
 - Confidence level  
-- Uncertainty  
-- Recommended action  
+- Uncertainty points  
+- Recommended actions  
 
 ---
 
-### 👤 Human Review
-- Approve  
-- Mark harmless  
-- Escalate  
+## 👤 Human-in-the-Loop Review
+
+Operators can:
+
+- Approve AI decision  
+- Mark as harmless  
+- Escalate to security  
+
+Human control is always preserved.
 
 ---
 
-## ⚙️ Architecture
+## ⚙️ System Architecture
 
-Frontend (React)  
-→ Backend (Node.js)  
-→ AI Agent Loop  
-→ Tool Layer  
-→ Simulated Data  
+## ⚙️ System Design Overview
+
+The system follows a modular AI-agent architecture where the frontend, backend, and tool-based reasoning engine work together to simulate an intelligent investigation system for industrial site monitoring.
 
 ---
 
-## 🔁 AI Loop
+## ⚙️ System Architecture
 
-AI → Select Tool → Execute → Observe → Update → Final Report  
+```text id="arch_main"
+Frontend (React)
+        ↓
+Backend (Node.js / Express)
+        ↓
+AI Agent Loop (Reasoning Engine)
+        ↓
+Tool Layer (MCP-style Tools)
+        ↓
+Simulated Site Data
 
----
+```markdown
 
-## ⚖️ Tradeoffs
+##📁 Project Structure
 
-- Simulated data instead of real sensors  
-- Fixed map coordinates instead of GIS  
-- No real drone hardware  
-- Focus on AI reasoning system  
+ridgeway-6-10-assistant/
+│
+├── client/                 # Frontend (React)
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.jsx
+│   │
+│   └── package.json
+│
+├── server/                 # Backend (Node.js + Express)
+│   ├── agent/
+│   ├── tools/
+│   ├── data/
+│   ├── routes/
+│   └── app.js
+│
+├── shared/
+├── docs/
+└── README.md
 
----
+###🚀 Running the Project
 
-## 🤖 AI Usage
+# 1️⃣ Clone repo
+git clone https://github.com/your-username/ridgeway-6-10-assistant.git
+cd ridgeway-6-10-assistant
 
-- Architecture design  
-- Code generation  
-- Debugging  
-- UI improvements  
+# =========================
+# 2️⃣ Backend setup
+# =========================
+cd server
+npm install
 
----
+echo PORT=5000 > .env
 
-## ⚠️ Limitation Example
+npm run dev
 
-A fence alert caused by wind may be flagged as suspicious.
+# Backend → http://localhost:5000
 
-System handles it by:
-- marking uncertainty  
-- lowering confidence  
-- requiring human review  
 
----
+# =========================
+# 3️⃣ Frontend setup
+# =========================
+cd ../client
+npm install
 
-## 🚀 Future Improvements
+npm run dev
 
-- Risk scoring system  
-- Heatmap visualization  
-- Persistent database  
-- Better AI reasoning  
-- UI animations  
+# Frontend → http://localhost:5173
 
----
 
-## 🏁 Conclusion
-
-This system transforms:
-
-Raw logs → AI investigation → clear decision support  
-
----
-
-## 👤 Author
-
-Abel John
+# =========================
+# 4️⃣ System Flow
+# =========================
+# React UI → Express API → AI Agent Loop → Tools → Data → UI
